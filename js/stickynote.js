@@ -14,12 +14,16 @@ function setupStickyNote(fullUrl, ui, idb) {
         }
     }
 
+    function closePopup() {
+        window.close();
+    }
+
     function onReset() {
-        fetchFromDatabase();
+        fetchFromDatabase(closePopup);
     }
 
     function onSave() {
-        saveToDatabase();
+        saveToDatabase(closePopup);
     }
 
     function setStatus(text) {
@@ -31,7 +35,7 @@ function setupStickyNote(fullUrl, ui, idb) {
         console.log(e);
     }
 
-    function fetchFromDatabase() {
+    function fetchFromDatabase(next) {
         var transaction = db.transaction([noteStoreName], "readonly");
         var store = transaction.objectStore(noteStoreName);
         var request = store.get(url);
@@ -44,6 +48,9 @@ function setupStickyNote(fullUrl, ui, idb) {
                 setStatus("Loaded");
                 setNoteText(request.result.text);
             }
+            if(next) {
+                next();
+            }
         }
     }
 
@@ -55,7 +62,7 @@ function setupStickyNote(fullUrl, ui, idb) {
         ui.editor.val(text);
     }
 
-    function saveToDatabase() {
+    function saveToDatabase(next) {
         var transaction = db.transaction([noteStoreName], "readwrite");
         var store = transaction.objectStore(noteStoreName);
         var request = store.put({
@@ -65,6 +72,9 @@ function setupStickyNote(fullUrl, ui, idb) {
         });
         request.onsuccess = function(e) {
             setStatus("Saved!");
+            if(next) {
+                next();
+            }
         }
     }
 
