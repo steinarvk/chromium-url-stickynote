@@ -6,6 +6,14 @@
     "permissions": [
         "tabs", "storage"
     ],
+    "commands": {
+        "_execute_browser_action": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+A"
+            },
+            "description": "Toggle sticky-note visibility"
+        }
+    },
     "browser_action": {
         "default_icon": {
             "19": "images/stickynote_icon_19.png",
