@@ -6,6 +6,11 @@
     "permissions": [
         "tabs", "storage"
     ],
+    "icons": {
+        "16": "images/stickynote_icon_16.png",
+        "48": "images/stickynote_icon_48.png",
+        "128": "images/stickynote_icon_128.png"
+    },
     "commands": {
         "_execute_browser_action": {
             "suggested_key": {
