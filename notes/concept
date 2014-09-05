@@ -1,0 +1,12 @@
+A Chromium extension to allow note-taking for web pages.
+
+Hit a shortcut key on any web page, and a text box will pop up.
+In the textbox you can enter notes, then push a "Save" button below to save them.
+
+If you visit a page that has associated notes, the text box will pop up automatically.
+
+The shortcut key _toggles_ visibility of the text box.
+
+You can also to to an about: page to search for saved notes by URL (regex).
+
+
