@@ -6,7 +6,12 @@ function setupStickyNote(fullUrl, ui, idb) {
     var db = null;
 
     function normalizeUrl(url) {
-        return url;
+        var i = url.search("\\?");
+        if(i === -1) {
+            return url;
+        } else {
+            return url.substr(0, i);
+        }
     }
 
     function onReset() {
