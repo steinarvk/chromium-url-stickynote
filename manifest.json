@@ -1,0 +1,11 @@
+{
+    "manifest_version": 2,
+    "name": "URL Sticky Note",
+    "description": "A space for locally stored notes on every web page.",
+    "version": "0.1",
+    "permissions": [],
+    "browser_action": {
+        "default_icon": "resources/stickynote_icon.png",
+        "default_popup": "html/stickynote_popup.html"
+    }
+}
