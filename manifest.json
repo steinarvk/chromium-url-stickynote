@@ -10,6 +10,7 @@
             "38": "resources/stickynote_icon_38.png",
             "76": "resources/stickynote_icon_76.png"
         },
+        "default_title": "URL Sticky Note",
         "default_popup": "html/stickynote_popup.html"
     }
 }
