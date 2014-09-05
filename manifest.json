@@ -6,9 +6,9 @@
     "permissions": [],
     "browser_action": {
         "default_icon": {
-            "19": "resources/stickynote_icon_19.png",
-            "38": "resources/stickynote_icon_38.png",
-            "76": "resources/stickynote_icon_76.png"
+            "19": "images/stickynote_icon_19.png",
+            "38": "images/stickynote_icon_38.png",
+            "76": "images/stickynote_icon_76.png"
         },
         "default_title": "URL Sticky Note",
         "default_popup": "html/stickynote_popup.html"
